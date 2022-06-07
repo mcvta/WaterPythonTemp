@@ -15,15 +15,19 @@ The machine learning models hyperparameter optimization was implemented with the
 Additionaly we have included the python code that was used to quantify the features importance with a random forest regressor. The random forest regressor with the following parameters: n_estimators = 50, max_depth = 485, min_samples_split = 5, max_features = 'auto', bootstrap = True; was the best performing model for stations with with 98% of missing data (_vide_ [sklearn webpage](https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html))
 
 
-## Predictor variables
+## Input data
 
-- Mean daily air temperature (°C);
-- Discharge (m<sup>3</sup>s<sup>-1</sup>);
-- Mean daily Global radiation (Jm<sup>-2</sup>);
-- Maximum day air temperature(°C);
-- Minimum day air temperature (°C);
-- Month of the year (e.g. 1, 2, 3,..., 12);
-- Day of the year (e.g. 1, 2, 3,..., 365).
+In the folder Input data we have included 83 input files. The files includes the following nine columns:
+
+1. Date (e.g. 10/24/1988  12:00:00 AM);
+2. Observed water temperature,(°C)
+3. Mean daily air temperature,(°C);
+4. Discharge,(m<sup>3</sup>s<sup>-1</sup>);
+5. Mean daily Global radiation,(Jm<sup>-2</sup>);
+6. Maximum day air temperature,(°C);
+7. Minimum day air temperature,(°C);
+8. Month of the year (e.g. 1, 2, 3,..., 12);
+9. Day of the year (e.g. 1, 2, 3,..., 365).
 
 ## Hyperparameter optimization
 It is easy to find the model parameters in the code. Nonetheless, in the folowing table we have included the models parameters that are optimized with the TPE algorithm.
@@ -68,4 +72,10 @@ SVR             |Categorical        |	'epsilon'|	[0.0001, 0.0005, 0.001, 0.005, 
 1. Create an empty folder;
 2. In this folder include the python code file (Random Forest_Feature_importance.py) and the input files (e.g. st1.xlsx; st2.xlsx; st3.xlsx;...;st100.xlsx). In the code file (Random Forest_Feature_importance.py) set the training and validation percentages of the dataset (e.g. train_size=0.7, test_size=0.3. Change the path to the output file (importance.csv).
 
+## References
+Bergstra, J. S., Bardenet, R., Bengio, Y. and Kegl, B.: Algorithms for hyper-parameter optimization, in Advances in Neural Information Processing Systems, 2011, 2546–2554, 2011.
 
+Bergstra, J., Yamins, D., Cox, D. D.: Making a Science of Model Search: Hyperparameter Optimization in Hundreds of Dimensions for Vision Architectures. TProc. of the 30th International Conference on Machine Learning (ICML 2013), 115-23, 2013.
+
+Toffolon, M. and Piccolroaz, S.: A hybrid model for river water temperature as a function of air temperature and discharge,
+types for water temperature prediction in rivers, Journal Hydrology 529, 302–315, https://doi.org/10.1016/j.jhydrol.2015.07.044, 2015.
