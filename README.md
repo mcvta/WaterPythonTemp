@@ -2,17 +2,17 @@
 
 
 This repository includes the python code of four models that were used to predict the water temperature of 83 rivers with limiting forcing data (with 98% of missing data). The results of this study are described in the following manuscript: 
-**Almeida, MC and Coelho PS.: Modeling river water temperature with limiting forcing data**:
+**Almeida, M.C. and Coelho P.S.: Modeling river water temperature with limiting forcing data**:
 
 - Random Forest (_vide_ [sklearn webpage](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html))
 -	Artificial Neural Network (Momentum algorithm) (_vide_ [neupy webpage](http://neupy.com/modules/generated/neupy.algorithms.Momentum.html))
 -	Support Vector Regression (_vide_ [sklearn webpage](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html]))
 -	Multiple Regression (_vide_ [sklearn webpage](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html]))
--	We have also included the hybrid air2stream (_vide _[Toffolon and Piccolroaz, 2015](https://github.com/marcotoffolon/air2stream)) fortan code in this repository. This benchmark model  was used to make results comparable with other studies.
+-	We have also included the hybrid air2stream (_vide _[Toffolon and Piccolroaz, 2015](https://github.com/marcotoffolon/air2stream)). This benchmark model was used to make results comparable with other studies.
 
 The machine learning models hyperparameter optimization was implemented with the Tree-structured Parzen Estimators algorithm (TPE) (Bergstra et al 2011). The python code implementation of TPE with the Hyperot algorithm (Bergstra et al 2013) is also available.
 
-Additionaly we have included the python code that was used to quantify the features importance with a random forest regressor. The random forest regressor with the following parameters: n_estimators = 50, max_depth = 485, min_samples_split = 5, max_features = 'auto', bootstrap = True; was the best performing model for stations with with 98% of missing data (_vide_ [sklearn webpage](https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html))
+Additionaly we have included the python code that was used to quantify the features importance with a random forest regressor. The random forest regressor with the following parameters: n_estimators = 50, max_depth = 485, min_samples_split = 5, max_features = 'auto', bootstrap = True; was the best performing model for stations with with 98% of missing data. (_vide_ Almeida and Coelho, 2022).
 
 
 ## Input data
@@ -73,6 +73,8 @@ SVR             |Categorical        |	'epsilon'|	[0.0001, 0.0005, 0.001, 0.005, 
 2. In this folder include the python code file (Random Forest_Feature_importance.py) and the input files (e.g. st1.xlsx; st2.xlsx; st3.xlsx;...;st100.xlsx). In the code file (Random Forest_Feature_importance.py) set the training and validation percentages of the dataset (e.g. train_size=0.7, test_size=0.3. Change the path to the output file (importance.csv).
 
 ## References
+Almeida, M.C. and Coelho P.S.: Modeling river water temperature with limiting forcing data,...
+
 Bergstra, J. S., Bardenet, R., Bengio, Y. and Kegl, B.: Algorithms for hyper-parameter optimization, in Advances in Neural Information Processing Systems, 2011, 2546–2554, 2011.
 
 Bergstra, J., Yamins, D., Cox, D. D.: Making a Science of Model Search: Hyperparameter Optimization in Hundreds of Dimensions for Vision Architectures. TProc. of the 30th International Conference on Machine Learning (ICML 2013), 115-23, 2013.
