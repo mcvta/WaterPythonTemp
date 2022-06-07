@@ -18,7 +18,7 @@ Additionaly, we have included the python code that was used to quantify the feat
 
 ## Input data
 
-In the folder Input data we have included 83 input files. The files includes the following nine columns:
+In the folder Input data we have included 83 input files. These files include the following nine columns:
 
 1. Date (e.g. 10/24/1988  12:00:00 AM);
 2. Observed water temperature,(°C);
