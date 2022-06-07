@@ -2,7 +2,7 @@
 
 
 This repository includes the python code of four models that were used to predict the water temperature of 83 rivers with limiting forcing data (with 98% of missing data). The results of this study are described in the following manuscript: 
-Almeida, MC and Coelho PS.: Modeling river water temperature with limiting forcing data:
+**Almeida, MC and Coelho PS.: Modeling river water temperature with limiting forcing data**:
 
 - Random Forest (_vide_ [sklearn webpage](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html))
 -	Artificial Neural Network (Momentum algorithm) (_vide_ [neupy webpage](http://neupy.com/modules/generated/neupy.algorithms.Momentum.html))
@@ -51,9 +51,16 @@ SVR             |Categorical        |	'gamma' |	[1, 0.1, 0.01, 0.001, 0.0001]
 SVR             |Categorical        |	'epsilon'|	[0.0001, 0.0005, 0.001, 0.005, 0.01, 0.05, 0.1, 0.5, 1, 5, 10]
 
 
-## How to run the models
-1 - Instal neupy from the [neupy webpage](http://neupy.com/pages/installation.html)
-2 - Create an empty folder;
-3 - In this folder include the python code file (e.g. Hyper_ANN.py) and the input file (e.g. st1.xlsx)
-4 - Run the code. The output includes 
+## How to run the hyperoptimization algorithm
+1. Instal neupy from the [neupy webpage](http://neupy.com/pages/installation.html);
+2. Create an empty folder;
+3. In this folder include the python code file (e.g. Hyper_ANN.py) and the input file (e.g. st1.xlsx); In the code file (e.g. Hyper_ANN.py) set the training and validation percentages of the dataset (e.g. train_size=0.7, test_size=0.3);
+4. Run the code. The output includes: file with score for each model run; file with the parameters for each model run; file with the Mean Average Error (MAE) for the training dataset; file with the MAE for the validation dataset; 
+
+## How to run the optimized models
+5. Create an empty folder;
+6. In this folder include the python code file (e.g. ANN.py) and the input file or files (e.g. st1.xlsx; st2.xlsx; st3.xlsx;...;st100.xlsx). In the code file (e.g. ANN.py.py) set the training and validation percentages of the dataset (e.g. train_size=0.7, test_size=0.3; Replace the model parameters with the value obtained in 4;
+7. Run the code. The output includes: file with the predicted values for the training dataset (1-st1.xlsxtrain.xlsx) and a file with with the predicted values for the validation dataset (2-st1.xlsxtest.xlsx).
+
+
 
