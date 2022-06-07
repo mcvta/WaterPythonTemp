@@ -8,9 +8,11 @@ This repository includes the python code of four models that were used to predic
 -	Artificial Neural Network (Momentum algorithm) (_vide_ [neupy webpage](http://neupy.com/modules/generated/neupy.algorithms.Momentum.html))
 -	Support Vector Regression (_vide_ [sklearn webpage](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html]))
 -	Multiple Regression (_vide_ [sklearn webpage](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html]))
-
+-	We have also included the hybrid air2stream (_vide _[Toffolon and Piccolroaz, 2015](https://github.com/marcotoffolon/air2stream)) fortan code in this repository. This benchmark model  was used to make results comparable with other studies.
 
 The machine learning models hyperparameter optimization was implemented with the Tree-structured Parzen Estimators algorithm (TPE) (Bergstra et al 2011). The python code implementation of TPE with the Hyperot algorithm (Bergstra et al 2013) is also available.
+
+Additionaly we have included the python code that was used to quantify the features importance with a random forest regressor. The random forest regressor with the following parameters: n_estimators = 50, max_depth = 485, min_samples_split = 5, max_features = 'auto', bootstrap = True; was the best performing model for stations with with 98% of missing data (_vide_ [sklearn webpage](https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html))
 
 
 ## Predictor variables
@@ -62,5 +64,8 @@ SVR             |Categorical        |	'epsilon'|	[0.0001, 0.0005, 0.001, 0.005, 
 6. In this folder include the python code file (e.g. ANN.py) and the input file or files (e.g. st1.xlsx; st2.xlsx; st3.xlsx;...;st100.xlsx). In the code file (e.g. ANN.py.py) set the training and validation percentages of the dataset (e.g. train_size=0.7, test_size=0.3; Replace the model parameters with the value obtained in 4;
 7. Run the code. The output includes: file with the predicted values for the training dataset (1-st1.xlsxtrain.xlsx) and a file with with the predicted values for the validation dataset (2-st1.xlsxtest.xlsx).
 
+## Feature importance with random forest regressor
+1. Create an empty folder;
+2. In this folder include the python code file (Random Forest_Feature_importance.py) and the input files (e.g. st1.xlsx; st2.xlsx; st3.xlsx;...;st100.xlsx). In the code file (Random Forest_Feature_importance.py) set the training and validation percentages of the dataset (e.g. train_size=0.7, test_size=0.3. Change the path to the output file (importance.csv).
 
 
