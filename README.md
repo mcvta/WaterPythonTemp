@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/500502645.svg)](https://zenodo.org/badge/latestdoi/500502645)
 
 This repository includes the python code of four models that were used to predict the water temperature of 83 rivers with limiting forcing data (with 98% of missing data). The results of this study are described in the following manuscript: 
-**Almeida, M.C. and Coelho P.S.: Modeling river water temperature with limiting forcing data**:
+**Almeida, M.C. and Coelho P.S.: Modeling river water temperature with limiting forcing data: air2stream v1.0.0, machine learning and multiple regression**:
 
 - Random Forest (_vide_ [sklearn webpage](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html))
 -	Artificial Neural Network (Momentum algorithm) (_vide_ [neupy webpage](http://neupy.com/modules/generated/neupy.algorithms.Momentum.html))
