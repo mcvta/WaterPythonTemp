@@ -88,5 +88,7 @@ Bergstra, J. S., Bardenet, R., Bengio, Y. and Kegl, B.: Algorithms for hyper-par
 
 Bergstra, J., Yamins, D., Cox, D. D.: Making a Science of Model Search: Hyperparameter Optimization in Hundreds of Dimensions for Vision Architectures. TProc. of the 30th International Conference on Machine Learning (ICML 2013), 115-23, 2013.
 
+Branco, P., Ribeiro, R. P., Torgo, L., Krawczyk, B., Moniz, N.: Smogn: a pre-processing approach for imbalanced regression, Proceedings of Machine Learning Research 74, 36–50, 2017.
+
 Toffolon, M. and Piccolroaz, S.: A hybrid model for river water temperature as a function of air temperature and discharge,
 types for water temperature prediction in rivers, Journal Hydrology 529, 302–315, https://doi.org/10.1016/j.jhydrol.2015.07.044, 2015.
