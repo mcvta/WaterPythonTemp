@@ -13,6 +13,8 @@ This repository includes the python code of four models that were used to predic
 
 The machine learning models hyperparameter optimization was implemented with the Tree-structured Parzen Estimators algorithm (TPE) (Bergstra et al 2011). The python code implementation of TPE with the Hyperot algorithm (Bergstra et al 2013) is also available.
 
+The raw training datasets were modified with an under/oversampling technique. 100 different training datasets are derived for each station from the initial dataset through the application of the Synthetic Minority Over-Sampling Technique for regression with Gaussian Noise (SMOGN) (Branco et al. 2017). The python code implementation of SMOGN is also available. This code applies the TPE algorithm; SMOGN and runs a random forest regressor.
+
 Additionaly, we have included the python code that was used to quantify the features importance with a random forest regressor (_vide_ [sklearn webpage](https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html)). The random forest regressor with the following parameters: n_estimators = 50, max_depth = 485, min_samples_split = 5, max_features = 'auto', bootstrap = True; was the best performing model for stations with 98% of missing data. (_vide_ Almeida and Coelho, 2022).
 
 
@@ -59,7 +61,7 @@ SVR             |Categorical        |	'epsilon'|	[0.0001, 0.0005, 0.001, 0.005, 
 
 
 ## How to run the hyperoptimization algorithm
-1. Instal neupy from the [neupy webpage](http://neupy.com/pages/installation.html);
+1. Install neupy from the [neupy webpage](http://neupy.com/pages/installation.html);
 2. Create an empty folder;
 3. In this folder place the python code file (e.g. Hyper_ANN.py) and the input file (e.g. st1.xlsx); In the code file (e.g. Hyper_ANN.py) set the training and validation percentages of the dataset (e.g. train_size=0.7, test_size=0.3);
 4. Run the code. The output includes: file with score for each model run; file with the parameters for each model run; file with the Mean Average Error (MAE) for the training dataset; file with the MAE for the validation dataset. 
@@ -67,7 +69,13 @@ SVR             |Categorical        |	'epsilon'|	[0.0001, 0.0005, 0.001, 0.005, 
 ## How to run the optimized models
 5. Create an empty folder;
 6. In this folder place the python code file (e.g. ANN.py) and the input file or files (e.g. st1.xlsx; st2.xlsx; st3.xlsx;...;st100.xlsx). In the code file (e.g. ANN.py.py) set the training and validation percentages of the dataset (e.g. train_size=0.7, test_size=0.3; Replace the model parameters with the value obtained in 4;
-7. Run the code. The output includes: file with the predicted values for the training dataset (1-st1.xlsxtrain.xlsx) and a file with the predicted values for the validation dataset (2-st1.xlsxtest.xlsx).
+7. Run the code. The output includes: file with the predicted values for the training dataset (1-st1.xlsxtrain.xlsx) and a file with the predicted values for the testing dataset (2-st1.xlsxtest.xlsx).
+
+## How to run SMOGN
+1. Install SMOGN from https://pypi.org/project/smogn/;
+2. Create an empty folder;
+3. In this folder place the python code file (e.g. Random_forest_Hyperopt_SMOGN.py) and the input file (e.g. st46.xlsx); In the code file (e.g. Random_forest_Hyperopt_SMOGN.py) set the training and validation percentages of the dataset (e.g. train_size=0.7, test_size=0.3);
+4. Run the code. The output includes: file with the modified training dataset (e.g.st46.xlsxSMOGN_out0.xlsx); file with the SMOGN parameters for the 100 modified training dataset (st46.xlsxSMOGN_parameters_out99.xlsx); file with the parameters for the ML model run (st46.xlsxparameters0.csv); file with the Mean Average Error (MAE) and the Nash–Sutcliffe model efficiency coefficient (NSE) for the 100 modified training datasets (A-st46.xlsxmodel_out99.xlsx); file with the predicted values for the training dataset (st46.xlsxtrain.xlsx) and a file with the predicted values for the testing dataset (st46.xlsxtest.xlsx).
 
 ## Feature importance with random forest regressor
 1. Create an empty folder;
