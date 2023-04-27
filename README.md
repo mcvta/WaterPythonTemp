@@ -13,7 +13,7 @@ This repository includes the python code of four models that were used to predic
 
 The machine learning models hyperparameter optimization was implemented with the Tree-structured Parzen Estimators algorithm (TPE) (Bergstra et al 2011). The python code implementation of TPE with the Hyperot algorithm (Bergstra et al 2013) is also available.
 
-The raw training datasets were modified with an under/oversampling technique. 100 different training datasets are derived for each station from the initial dataset through the application of the Synthetic Minority Over-Sampling Technique for regression with Gaussian Noise (SMOGN) (Branco et al. 2017). The python code implementation of SMOGN is also available. This code applies the TPE algorithm; SMOGN and runs a random forest regressor.
+The raw training datasets were modified with an under/oversampling technique. 100 different training datasets are derived for each station from the initial dataset through the application of the Synthetic Minority Over-Sampling Technique for regression with Gaussian Noise (SMOGN) (Branco et al. 2017). The python code implementation of SMOGN is also available. This code applies the TPE algorith, SMOGN and runs a random forest regressor.
 
 Additionaly, we have included the python code that was used to quantify the features importance with a random forest regressor (_vide_ [sklearn webpage](https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html)). The random forest regressor with the following parameters: n_estimators = 50, max_depth = 485, min_samples_split = 5, max_features = 'auto', bootstrap = True; was the best performing model for stations with 98% of missing data. (_vide_ Almeida and Coelho, 2022).
 
